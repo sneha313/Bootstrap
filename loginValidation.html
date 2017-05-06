@@ -1,0 +1,86 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<script>
+function login()
+{
+var email=document.getElementById("email").value;
+email=email.trim();
+if(email=="")
+{
+document.getElementById("email").style.borderColor="red";
+}
+else
+{
+document.getElementById("email").style.borderColor="";
+}
+
+var pwd=document.getElementById("pwd").value;
+pwd=pwd.trim();
+if(pwd=="")
+{
+document.getElementById("pwd").style.borderColor="red";
+}
+else{
+document.getElementById("pwd").style.borderColor="";
+}
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+if(male==true || female==true)
+{
+document.getElementById("gendererror").style.display="none";
+}
+else
+{
+document.getElementById("gendererror").style.display="block";
+}
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<div class="row">
+<div class="form-group">
+<div class="col-sm-4"><label>Email</label></div>
+<div class="col-sm-8"><input type="text" id="email" name="email" class="form-control" placeholder="enter email"></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-4"><label>Password</label></div>
+<div class="col-sm-8"><input type="text" id="pwd" name="password" class="form-control" placeholder="enter password"></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-4"><label>Gender</label></div>
+<div class="col-sm-8"><input type="radio" id="male" name="gender">Male
+<input type="radio" id="female" name="gender">Female
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-4"></div>
+<div class="col-sm-8">
+<p id="gendererror" style="color:red;display:none">Please select Gender</p></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-12 text-center"><button class="btn btn-primary" value="login" onclick="login()">Login</button></div>
+</div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<script>
+function validate()
+{
+//fetching the value of text box whose id is fname
+var name=document.getElementById("Fname").value;
+name=name.trim();//trim left and rihgt spaces of variable
+//checking if name variable is blank
+if(name=="")
+{
+//set the textbox border color to red whose id is Fname
+document.getElementById("Fname").style.borderColor="red";
+}
+else
+{
+document.getElementById("Fname").style.borderColor="";
+}
+
+var email=document.getElementById("email").value;
+email=email.trim();
+if(email=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("email").style.borderColor="red";
+}
+else{
+
+document.getElementById("email").style.borderColor="";
+}
+var mobile=document.getElementById("mobile").value;
+mobile=mobile.trim();
+if(mobile=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("mobile").style.borderColor="red";
+}
+else{
+
+document.getElementById("mobile").style.borderColor="";
+}
+var address=document.getElementById("address").value;
+address=address.trim();
+if(address=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("address").style.borderColor="red";
+}
+else{
+
+document.getElementById("address").style.borderColor="";
+}
+
+
+var city=document.getElementById("city").value;
+city=city.trim();
+if(city=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("city").style.borderColor="red";
+}
+else{
+
+document.getElementById("city").style.borderColor="";
+}
+
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+
+if(male==true || female==true)//if radio is checked then display none don't show error
+{
+document.getElementById("gendererror").style.display="none";
+}
+else{//if it is unchceked then display error
+
+document.getElementById("gendererror").style.display="block";
+} 
+
+var city=document.getElementById("city").value;
+city=city.trim();
+if(city=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("city").style.borderColor="red";
+}
+else{
+
+document.getElementById("city").style.borderColor="";
+}
+
+var hobby=document.getElementById("hobby").checked;
+var hobby1=document.getElementById("hobby1").checked;
+var hobby2=document.getElementById("hobby2").checked;
+
+if(hobby==true || hobby1==true || hobby2==true)//if radio is checked then display none don't show error
+{
+document.getElementById("hobbyerror").style.display="none";
+}
+else{//if it is unchceked then display error
+
+document.getElementById("hobbyerror").style.display="block";
+} 
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>Name:</label></div>
+<div class="col-sm-9"><input type="text" id="Fname" class="form-control" placeholder="enter name"></div>
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>Email:</label></div>
+<div class="col-sm-9"><input type="text" id="email" class="form-control" placeholder="enter email"></div>
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>Mobile:</label></div>
+<div class="col-sm-9"><input type="text" id="mobile" class="form-control" placeholder="enter mobile number"></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>address:</label></div>
+<div class="col-sm-9"><textarea id="address" class="form-control" placeholder="enter address"></textarea></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>City</label></div>
+<div class="col-sm-9"><select class="form-control" id="city">
+<option value="">choose option</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Chennai">Chennai</option>
+<option value="Pune">Pune</option>
+
+</select>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>Gender</label></div>
+<div class="col-sm-9"><input type="radio" name="gender" id="male" value="male">Male
+<input type="radio" name="gender" id="female" value="female">Female
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"></div>
+<div class="col-sm-9">
+<p id="gendererror" style="color:red;display:none">Please select Gender</p>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"><label>Hobby</label></div>
+<div class="col-sm-9"><input type="checkbox" name="chk" id="hobby" value="reading">reading
+<input type="checkbox" name="chk" id="hobby" value="writing">writing
+<input type="checkbox" name="chk" id="hobby" value="singing">singing
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3"></div>
+<div class="col-sm-9">
+<p id="hobbyerror" style="color:red;display:none">Please select hobby</p>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-12">
+<center>
+<button class="btn btn-primary" value="send" onclick="validate()">Send</button>
+<button class="btn btn-danger">Clear</button>
+</center>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4"></div>
+</div>
+</div>
+</body>
+</html>

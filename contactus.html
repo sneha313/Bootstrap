@@ -1,0 +1,106 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<script>
+function validate()
+{
+//fetching the value of text box whose id is fname
+var name=document.getElementById("Fname").value;
+name=name.trim();//trim left and rihgt spaces of variable
+//checking if name variable is blank
+if(name=="")
+{
+//set the textbox border color to red whose id is Fname
+document.getElementById("Fname").style.borderColor="red";
+}
+else
+{
+document.getElementById("Fname").style.borderColor="";
+}
+
+var email=document.getElementById("email").value;
+email=email.trim();
+if(email=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("email").style.borderColor="red";
+}
+else{
+
+document.getElementById("email").style.borderColor="";
+}
+var mobile=document.getElementById("mobile").value;
+mobile=mobile.trim();
+if(mobile=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("mobile").style.borderColor="red";
+}
+else{
+
+document.getElementById("mobile").style.borderColor="";
+}
+var message=document.getElementById("msg").value;
+message=message.trim();
+if(message=="")
+{
+
+//set the textbox border color to red whose id is Fname
+document.getElementById("msg").style.borderColor="red";
+}
+else{
+
+document.getElementById("msg").style.borderColor="";
+}
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3">Name:</div>
+<div class="col-sm-9"><input type="text" id="Fname" class="form-control" placeholder="enter name"></div>
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3">Email:</div>
+<div class="col-sm-9"><input type="text" id="email" class="form-control" placeholder="enter email"></div>
+</div>
+</div>
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3">Mobile:</div>
+<div class="col-sm-9"><input type="text" id="mobile" class="form-control" placeholder="enter mobile number"></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-3">Message:</div>
+<div class="col-sm-9"><textarea id="msg" class="form-control" placeholder="enter message"></textarea></div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+<div class="col-sm-12">
+<center>
+<button class="btn btn-primary" value="send" onclick="validate()">Send</button>
+<button class="btn btn-danger">Clear</button>
+</center>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4"></div>
+</div>
+</div>
+</body>
+</html>
