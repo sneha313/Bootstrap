@@ -1,0 +1,56 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<script>
+function login()
+{
+var email=document.getElementById("email").value;
+email=email.trim();
+if(email=="")
+{
+document.getElementById("email").style.borderColor="red";
+}
+else
+{
+document.getElementById.style.borderColor="";
+}
+var pwd=document.getElementById("pwd").value;
+pwd=pwd.trim();
+if(pwd=="")
+{
+document.getElementById("pwd").style.borderColor="red";
+}
+else{
+document.getElementById("pwd").style.borderColor="";
+}
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<div class="row">
+<div class="col-sm-4"><label>email</label></div>
+<div class="col-sm-8"><input type="text" class="form-control" name="email" id="email" placeholder="enter email"></div>
+</div>
+
+<div class="row">
+<div class="col-sm-4"><label>password</label></div>
+<div class="col-sm-8"><input type="text" class="form-control" id="pwd" name="password" placeholder="enter password"></div>
+</div>
+
+<div class="row">
+<div class="col-sm-12 text-center"><button class="btn btn-primary" value="login" onclick="login()">login</button></div>
+</div>
+
+<div class="row">
+<div class="col-sm-12 text-center"><a href="#">I am new user</a></div>
+</div>
+</div>
+<div class="col-sm-4"></div>
+</div>
+</div>
+</body>
+</html>

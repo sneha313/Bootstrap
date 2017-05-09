@@ -1,0 +1,182 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<script>
+function update()
+{
+var fname=document.getElementById("fname").value;
+fname=fname.trim();
+if(fname=="")
+{
+document.getElementById("fname").style.borderColor="red";
+}
+else
+{
+
+document.getElementById("fname").style.borderColor="";
+}
+var lname=document.getElementById("lname").value;
+lname=lname.trim();
+if(lname=="")
+{
+document.getElementById("lname").style.borderColor="red";
+}
+else
+{
+document.getElementById("lname").style.borderColor="";
+}
+
+var mobile=document.getElementById("mobNo").value;
+mobile=mobile.trim();
+if(mobile=="")
+{
+document.getElementById("mobNo").style.borderColor="red";
+}
+else{
+document.getElementById("mobNo").style.borderColor="";
+}
+
+var email=document.getElementById("email").value;
+email=email.trim();
+if(email=="")
+{
+document.getElementById("email").style.borderColor="red";
+}
+else{
+document.getElementById("email").style.borderColor="";
+}
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+if(male==true ||female==true)
+{
+document.getElementById("genderError").style.display="none";
+}
+else
+{
+document.getElementById("genderError").style.display="block";
+}
+var married=document.getElementById("married").checked;
+var unmarried=document.getElementById("unmarried").checked;
+if(married==true || unmarried==true)
+{
+document.getElementById("marriederror").style.display="none";
+}
+else{
+document.getElementById("marriederror").style.display="block";
+}
+var address=document.getElementById("address").value;
+address=address.trim();
+if(address=="")
+{
+document.getElementById("address").style.borderColor="red";
+}
+else{
+document.getElementById("address").style.borderColor="";
+}
+var pin=document.getElementById("pin").value;
+pin=pin.trim();
+if(pin=="")
+{
+document.getElementById("pin").style.borderColor="red";
+}
+else{
+document.getElementById("pin").style.borderColor="";
+}
+
+var e = document.getElementById("ddlView");
+var strUser = e.options[e.selectedIndex].value;
+//if you need text to be compared then use
+var strUser1 = e.options[e.selectedIndex].text;
+if(strUser==0) //for text use if(strUser1=="Select")
+{
+alert("Please select a user");
+}
+
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<center>
+<label>Personal Information</label></center>
+<div class="row">
+<div class="col-sm-3"><label>First Name</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" id="fname" name="fname" placeholder="enter first name"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>Last Name</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" id="lname" name="lname" placeholder="enter last name"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>Mobile Number</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" id="mobNo" name="mobNo" placeholder="enter mobile number"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>Email Id</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" id="email" name="email" placeholder="enter email id"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>Gender</label></div>
+<div class="col-sm-9"><input type="radio" id="male" name="gender" placeholder="enter gender">male
+<input type="radio" id="female" name="gender" placeholder="enter gender">female
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-9"><p id="genderError" style="color:red;display:none">provide input gender</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-3"><label>Marital Status</label></div>
+<div class="col-sm-9"><input type="radio" id="married" name="gender" placeholder="enter gender">married
+<input type="radio" id="unmarried" name="gender" placeholder="enter gender">unmarried
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-9"><p id="marriederror" style="color:red;display:none">provide input marrital status</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-3"><label>Full Address</label></div>
+<div class="col-sm-9"><textarea class="form-control" id="address" name="address" placeholder="enter full address"></textarea></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>Pin code</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" id="pin" name="pin" placeholder="enter pin code"></div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>state</label></div>
+<div class="col-sm-9"><select class="form-control" id="state" name="state">
+<option>choose state</option>
+<option>karnatka</option>
+<option>bihar</option>
+<option>bengal</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3"><label>district</label></div>
+<div class="col-sm-9"><select class="form-control" id="district" name="state">
+<option>choose district</option>
+<option>karnatka</option>
+<option>bihar</option>
+<option>bengal</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 text-center"><button  value="update" onclick="update()">update</button></div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+</div>
+</body>
+</html>
