@@ -1,9 +1,66 @@
-<html>
+<html lang="en">
 <head>
-
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+  
+<link rel="stylesheet" href="assets/css/carousel.css">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+  <style>
+.btn-default{
+background:#E6E6FA;
+}
+.active1{
+background:grey;
+}
+.circle{
+height:100px;
+width:100px;
+border-radius:50px;
+background:black;
+margin-left:580px;
+margin-bottom:-40px;
+}
+  </style>
+  
 </head>
 <body>
+
 <div class="container">
+  <h2>Name of Site</h2>
+  <p>To span the entire width of the screen, use the .btn-group-justified class:</p>
+  <div class="btn-group btn-group-justified site">
+    <a href="#" class="btn btn-default active1">Home</a>
+    <a href="#" class="btn btn-default">About US</a>
+    <a href="#" class="btn btn-default">Contact Us</a>
+  </div>
 </div>
+
+<div class="container">
+
+<div class="row">
+<div class="col-sm-12">
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="image/1.jpg" alt="First slide" style="">
+          <div class="container">
+            <div class="carousel-caption">
+			<div class="circle"><p style="font-size:14px; padding-top:40px;">I am title</p></div>
+			  <button class="btn btn-primary">know more</button>
+            </div><!--carousel caption close-->
+          </div><!--container div close-->
+        </div><!--item div close-->
+     
+        
+      </div><!--carousel inner close-->
+    
+     
+	  </div><!--my carousel div close-->
+	  
+	  </div><!--12 column close-->
+	  </div><!--row div close-->
+    </div><!-- /.carousel -->
+
 </body>
 </html>
